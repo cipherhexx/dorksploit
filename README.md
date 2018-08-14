@@ -16,8 +16,11 @@ NOTE: It is Only For Educational Purposes. Neither I Say Nor I Promote To Hack S
 copy the following commands 
 
 git clone https://github.com/cipherhexx/dorksploit
+
 cd dorksploit
+
 chmod +x dorksploit
+
 ./dorksploit
 
 # Shoutout
