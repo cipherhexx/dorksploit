@@ -14,7 +14,8 @@ echo ""
 echo "Select an Option"
 echo ""
 echo "1. Install the requirements"
-echo "2. Start the tool"
+echo "2. Update The Tool"
+echo "3. Start the tool"
 read OPT
 if [ "$OPT" -eq 1 ]
 then
@@ -27,8 +28,26 @@ pip2 install --upgrade pip
 pip2 install urllib3
 pip2 install progressbar2
 clear
-echo "succesfully installed now run the tool again :)"
+echo "succesfully installed now select run the tool :)"
+./dorksploit
+exit
 elif [ "$OPT" -eq 2 ]
+then
+echo "Downloading Latest Files!!!"
+mkdir update
+cd update
+git clone https://github.com/cipherhexx/dorksploit
+cp -r -f * ../.. > temp
+cd ../..
+rm -rf  update >> temp
+rm update.speedx >> temp
+rm temp
+chmod +x dorksploit
+echo "Dorksploit Will Now Restart !!"
+echo -e "\e[1;34m Press Enter To Proceed To Restart..."
+read a6
+./dorksploit
+elif [ "$OPT" -eq 3 ]
 then
 clear
 cat << "EOF" 
